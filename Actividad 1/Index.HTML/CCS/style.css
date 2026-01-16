@@ -1,0 +1,164 @@
+/* VARIABLES DE COLOR */
+:root {
+    --color-primario: #2563eb;
+    --color-secundario: #1e293b;
+    --color-fondo: #f1f5f9;
+    --color-tarjeta: #ffffff;
+    --color-texto: #0f172a;
+}
+
+/* ESTILOS GENERALES */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* SECCIONES */
+section {
+    padding: 30px;
+    margin: 30px 20px;
+    background: white;
+    border-radius: 12px;
+}
+
+/* LISTA DE CELULARES */
+.lista-celulares {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* TARJETAS */
+.celular {
+    width: 30%;
+    min-width: 250px;
+    background: var(--color-tarjeta);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.celular:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.celular h3 {
+    margin-top: 15px;
+    color: var(--color-primario);
+}
+
+/* IMÁGENES */
+.celular img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* FORMULARIO */
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #cbd5f5;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--color-primario);
+}
+
+form button {
+    background: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #1e40af;
+}
+
+/* FOOTER */
+footer {
+    background: var(--color-secundario);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #60a5fa;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .celular {
+        width: 100%;
+    }
+
+    section {
+        margin: 15px;
+    }
+}
